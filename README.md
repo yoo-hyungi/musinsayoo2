@@ -19,3 +19,7 @@
 ![2](https://github.com/yoo-hyungi/musinsayoo2/assets/149982799/32a40182-7255-4000-b2a1-9a98b56a4e1a)
 
 ![3](https://github.com/yoo-hyungi/musinsayoo2/assets/149982799/ab0921a7-b7f4-4581-a40a-78225d528af2)
+
+4. CQRS
+   ![10](https://github.com/yoo-hyungi/musinsayoo2/assets/149982799/b61035b3-f84b-4e70-b2a3-6224f871064d)
+![11](https://github.com/yoo-hyungi/musinsayoo2/assets/149982799/7b716ce1-145b-479e-a8bc-fe78610e7a47)

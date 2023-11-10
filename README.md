@@ -1,91 +1,16 @@
-# 
+1. 주제 : 무신사(옷쇼핑)
+1-1. 시나리오
+   1. 고객이 옷을 골라 주문한다.
+   2. 주문이 완료되면 배송을 시작한다.
+   3. 배송이 시작되면 상태가 변경된다.
+   4. 배송이 완료되면 전체수량이 주문수량만큼 줄어든다.
+   5. 고객의 변심으로 옷을 취소한다.
+   6. 주문이 취소되면 배송이 취소된다.
+   7. 배송이 취소되면 상태가 변경된다.
+   8. 배송이 취소되면 전체수량이 취소수량만큼 증가한다.
 
-## Model
-www.msaez.io/#/storming/musinsayoo
+ 2. 이벤트스토밍 모델
+![image](https://github.com/acmexii/stmall-apexacme/assets/35618409/e804e87f-7c2f-421a-b6ab-db04eb01e5c3)
 
-## Before Running Services
-### Make sure there is a Kafka server running
-```
-cd kafka
-docker-compose up
-```
-- Check the Kafka messages:
-```
-cd infra
-docker-compose exec -it kafka /bin/bash
-cd /bin
-./kafka-console-consumer --bootstrap-server localhost:9092 --topic
-```
-
-## Run the backend micro-services
-See the README.md files inside the each microservices directory:
-
-- order
-- delivery
-- cloth
-- customercenter
-
-
-## Run API Gateway (Spring Gateway)
-```
-cd gateway
-mvn spring-boot:run
-```
-
-## Test by API
-- order
-```
- http :8088/orders id="id" userId="userId" productName="productName" productId="productId" qty="qty" status="status" orderDt="orderDt" address="address" 
-```
-- delivery
-```
- http :8088/deliveryManagements id="id" userId="userId" orderId="orderId" productName="productName" productId="productId" qty="qty" status="status" deliveryDt="deliveryDt" 
-```
-- cloth
-```
- http :8088/inventories id="id" productName="productName" productImg="productImg" stock="stock" 
-```
-- customercenter
-```
-```
-
-
-## Run the frontend
-```
-cd frontend
-npm i
-npm run serve
-```
-
-## Test by UI
-Open a browser to localhost:8088
-
-## Required Utilities
-
-- httpie (alternative for curl / POSTMAN) and network utils
-```
-sudo apt-get update
-sudo apt-get install net-tools
-sudo apt install iputils-ping
-pip install httpie
-```
-
-- kubernetes utilities (kubectl)
-```
-curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
-sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
-```
-
-- aws cli (aws)
-```
-curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-unzip awscliv2.zip
-sudo ./aws/install
-```
-
-- eksctl 
-```
-curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
-sudo mv /tmp/eksctl /usr/local/bin
-```
-
+3. Domain Event Pub/Sub
+![image](https://github.com/acmexii/stmall-apexacme/assets/35618409/74e8288e-33ea-42ac-a25a-08ab3a540055)

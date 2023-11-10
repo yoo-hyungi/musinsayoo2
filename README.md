@@ -9,8 +9,13 @@
    7. 배송이 취소되면 상태가 변경된다.
    8. 배송이 취소되면 전체수량이 취소수량만큼 증가한다.
 
- 2. 이벤트스토밍 모델
-![image](https://github.com/acmexii/stmall-apexacme/assets/35618409/e804e87f-7c2f-421a-b6ab-db04eb01e5c3)
+2. 이벤트스토밍 모델
+![eventstorming](https://github.com/yoo-hyungi/musinsayoo2/assets/149982799/5472468b-3cd0-4017-b2e9-677042707079)
 
 3. Domain Event Pub/Sub
-![image](https://github.com/acmexii/stmall-apexacme/assets/35618409/74e8288e-33ea-42ac-a25a-08ab3a540055)
+
+![1](https://github.com/yoo-hyungi/musinsayoo2/assets/149982799/fabbe312-9ca5-4bb4-a570-ed02b4362000)
+
+![2](https://github.com/yoo-hyungi/musinsayoo2/assets/149982799/32a40182-7255-4000-b2a1-9a98b56a4e1a)
+
+![3](https://github.com/yoo-hyungi/musinsayoo2/assets/149982799/ab0921a7-b7f4-4581-a40a-78225d528af2)
